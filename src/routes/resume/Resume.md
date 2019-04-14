@@ -1,5 +1,4 @@
-
-# Live demo
+# Dan
 
 Changes are automatically rendered as you type.
 
@@ -26,19 +25,3 @@ React.render(
 ```
 
 Pretty neat, eh?
-
-## Tables?
-
-| Feature   | Support |
-| --------- | ------- |
-| tables    | ✔ |
-| alignment | ✔ |
-| wewt      | ✔ |
-
-## More info?
-
-Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
-
----------------
-
-A component by [Espen Hovlandsdal](https://espen.codes/)

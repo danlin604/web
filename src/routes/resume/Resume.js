@@ -2,12 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import ReactMarkdown from 'react-markdown'
 import md from './Resume.md'
+import { StyleWrapper } from './StyleWrapper'
 
 export const Resume = (props) => {
   return (
     <Layout>
       <Content>
-        <ReactMarkdown source={md} />
+        <StyleWrapper>
+          <ReactMarkdown
+            source={ md } />
+        </StyleWrapper>
       </Content>
     </Layout>
   )
@@ -21,6 +25,5 @@ const Layout = styled.section`
 `
 
 const Content = styled.article`
-  margin: 32px;
-  background-color: paleturquoise;
+  margin: 16px;
 `
