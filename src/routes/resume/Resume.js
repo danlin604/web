@@ -25,4 +25,5 @@ const Layout = styled.section`
 
 const Content = styled.article`
   margin: 16px;
+  max-width: 740px;
 `

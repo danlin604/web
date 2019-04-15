@@ -1,27 +1,28 @@
 # Dan
 
-Changes are automatically rendered as you type.
+I am a software developer. JavaScript and web security is my current passion. There is little else that I enjoy more than to sit down, and grok new ideas. I'll be updating this website in my spare time, so be sure to check back occasioanlly for new content!
 
-* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+## Skills
 
-## HTML block below
+### Working Knowledge
 
-<blockquote>
-  This blockquote will change based on the HTML settings above.
-</blockquote>
+`
+JavaScript, PostgreSQL, React Native, React, Android, CSS3, Git, HTML5, Java, Node.js, T-SQL, Angular, A-Frame, RxJS, GraphQL
+`
 
-## How about some code?
-```js
-var React = require('react');
-var Markdown = require('react-markdown');
+### Basic Knowledge
 
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
-```
+`
+AWS, Agile, C, C++, C#, Code Igniter, JIRA, jQuery, Linux, MySQL, PHP, SVN, Mocha, Jasmine, JUnit, Tableau, Power BI, Rust, Three.js
+`
 
-Pretty neat, eh?
+## Education
+
+**British Columbia Institute of Technology**  
+Diploma - Computer Systems Technology  
+Graduated with Distinction  
+2014 – 2016  
+
+**Simon Fraser University**  
+Bachelor of Arts - English  
+2008 – 2012  

@@ -25,9 +25,20 @@ const Layout = styled.nav`
 
   a {
     padding: 8px;
-    font-size: 16px;
+    font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.8);
     text-decoration: none;
-    /* cursor: hand; */
+    outline: none;
+  }
+
+  a,
+  a:visited {
+    color: #3498db;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    color: #2980b9;
   }
 `

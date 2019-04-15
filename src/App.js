@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: Roboto, sans-serif;
     font-weight: 500; // medium
   }
+  
   html, body, main {
     font-weight: 400;
     height: 100%;
