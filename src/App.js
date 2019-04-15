@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 //
 import { Header } from './components/Header/Header'
@@ -17,10 +17,10 @@ export default class App extends Component {
 
           {/* Routes */}
           <Switch>
-            <Route path="/" exact component={Resume}/>
-            <Route path="/resume" component={Resume}/>
-            <Route path="/projects" component={Resume}/>
-            <Route path="/contact" component={Resume}/>
+            <Route path="/" exact component={Resume} />
+            <Route path="/resume" component={Resume} />
+            <Route path="/projects" component={Resume} />
+            <Route path="/contact" component={Resume} />
             <Route path="/404" component={Page404} />
             <Route component={NoMatch} />
           </Switch>

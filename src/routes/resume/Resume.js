@@ -4,13 +4,12 @@ import ReactMarkdown from 'react-markdown'
 import md from './Resume.md'
 import { StyleWrapper } from './StyleWrapper'
 
-export const Resume = (props) => {
+export const Resume = () => {
   return (
     <Layout>
       <Content>
         <StyleWrapper>
-          <ReactMarkdown
-            source={ md } />
+          <ReactMarkdown source={md} />
         </StyleWrapper>
       </Content>
     </Layout>

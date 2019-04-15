@@ -42,6 +42,9 @@ module.exports = {
   },
   optimization: {
     minimizer: [new UglifyJsPlugin()],
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new HtmlWebPackPlugin({
