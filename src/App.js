@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-//
 import { Header } from './components/Header/Header'
 import { Resume } from './routes/resume/Resume'
+import { Projects } from './routes/projects/Projects'
+import { Contact } from './routes/contact/Contact'
 import { NoMatch, Page404 } from './routes/404/404'
 
 export default class App extends Component {
@@ -19,8 +20,8 @@ export default class App extends Component {
           <Switch>
             <Route path="/" exact component={Resume} />
             <Route path="/resume" component={Resume} />
-            <Route path="/projects" component={Resume} />
-            <Route path="/contact" component={Resume} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/contact" component={Contact} />
             <Route path="/404" component={Page404} />
             <Route component={NoMatch} />
           </Switch>
