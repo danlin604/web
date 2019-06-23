@@ -4,17 +4,17 @@ import p5 from 'p5'
 export class P5Wrapper extends React.Component {
   componentDidMount() {
     this.canvas = new p5(this.props.sketch, this.wrapper)
-    if( this.canvas.myCustomRedrawAccordingToNewPropsHandler ) {
+    if (this.canvas.myCustomRedrawAccordingToNewPropsHandler) {
       this.canvas.myCustomRedrawAccordingToNewPropsHandler(this.props)
     }
   }
 
   componentWillReceiveProps(newprops) {
-    if(this.props.sketch !== newprops.sketch){
+    if (this.props.sketch !== newprops.sketch) {
       this.canvas.remove()
       this.canvas = new p5(newprops.sketch, this.wrapper)
     }
-    if( this.canvas.myCustomRedrawAccordingToNewPropsHandler ) {
+    if (this.canvas.myCustomRedrawAccordingToNewPropsHandler) {
       this.canvas.myCustomRedrawAccordingToNewPropsHandler(newprops)
     }
   }
@@ -24,6 +24,6 @@ export class P5Wrapper extends React.Component {
   }
 
   render() {
-    return <div ref={wrapper => this.wrapper = wrapper}></div>
+    return <div ref={wrapper => (this.wrapper = wrapper)} />
   }
 }

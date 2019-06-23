@@ -8,6 +8,9 @@ import { Projects } from './routes/projects/Projects'
 import { Contact } from './routes/contact/Contact'
 import { NoMatch, Page404 } from './routes/404/404'
 
+// Projects
+import { SolarSystem } from './routes/projects/solar-system/SolarSystem'
+
 export default class App extends Component {
   render() {
     return (
@@ -22,6 +25,8 @@ export default class App extends Component {
             <Route path="/resume" component={Resume} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
+            {/* Projects */}
+            <Route path="/solar-system" component={SolarSystem} />
             <Route path="/404" component={Page404} />
             <Route component={NoMatch} />
           </Switch>

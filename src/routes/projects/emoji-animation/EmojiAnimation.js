@@ -26,11 +26,7 @@ export class EmojiAnimation extends React.Component {
   render() {
     const { phase } = this.state
 
-    return (
-      <Layout>
-        { moon[phase] }
-      </Layout>
-    )
+    return <Layout>{moon[phase]}</Layout>
   }
 }
 

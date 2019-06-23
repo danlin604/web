@@ -10,7 +10,7 @@
     "start": "webpack-dev-server --open --hot --mode development",
     "build:dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "yarn jest",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "yarn eslint ./src"
   },
@@ -19,12 +19,15 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.12.4",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^2.4.1",
+    "jest": "^24.8.0",
     "prettier": "1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -37,10 +40,16 @@
   },
   "dependencies": {
     "aframe": "^0.9.1",
+    "aframe-orbit-controls": "^1.2.0",
     "p5": "^0.8.0",
     "raw-loader": "^2.0.0",
     "react-markdown": "^4.0.6",
     "react-router-dom": "^5.0.0",
     "styled-components": "^4.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn format && yarn test"
+    }
   }
 }
