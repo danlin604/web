@@ -1,10 +1,10 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
-  entry: './src/index.js',
+  entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
@@ -41,15 +41,29 @@ module.exports = {
     ]
   },
   optimization: {
-    minimizer: [new UglifyJsPlugin()],
+    minimizer: [new TerserPlugin({
+      parallel: true,
+      terserOptions: {
+        output: {
+          comments: false,
+        },
+      },
+    })],
     splitChunks: {
       chunks: 'all',
     },
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: './src/index.html'
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      Src: path.resolve(__dirname, 'src'),
+      Lib: path.resolve(__dirname, 'src/lib'),
+      Components: path.resolve(__dirname, 'src/components'),
+      Test: path.resolve(__dirname, 'src/test')
+    }
+  }
 };

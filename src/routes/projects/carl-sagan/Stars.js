@@ -64,6 +64,4 @@ export class Stars extends Component {
   }
 }
 
-const Layout = styled.section`
-  cursor: pointer;
-`
+const Layout = styled.section``

@@ -43,6 +43,4 @@ const Layout = styled.section`
   font-size: 64px;
 
   background-color: lightgrey;
-
-  cursor: pointer;
 `

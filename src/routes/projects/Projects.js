@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 import { EmojiAnimation } from './emoji-animation/EmojiAnimation'
 import { Stars } from './carl-sagan/Stars'
@@ -14,7 +15,16 @@ export const Projects = () => {
       <Tile>
         <Stars />
       </Tile>
-      <Tile />
+
+      <Tile>
+        <NavLink
+          activeStyle={{ textDecoration: 'underline' }}
+          to="/solar-system"
+        >
+          <SolarSystemTileContent>Solar System</SolarSystemTileContent>
+        </NavLink>
+      </Tile>
+
       <Tile />
       <Tile />
     </Layout>
@@ -41,4 +51,26 @@ const Tile = styled.article`
   justify-content: center;
 
   overflow: hidden;
+
+  a {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    outline: none;
+  }
+`
+
+const SolarSystemTileContent = styled.section`
+  margin: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffeb3b;
+  font-weight: 800;
+  color: #343d46;
+  font-size: 2rem;
 `

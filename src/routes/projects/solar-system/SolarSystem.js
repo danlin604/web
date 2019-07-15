@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import 'aframe'
-import 'lib/aframe-low-poly.min'
-import 'lib/aframe-star-system-component'
+import 'Lib/aframe-low-poly.min'
+import 'Lib/aframe-star-system-component'
 import 'aframe-orbit-controls'
 
 export const SolarSystem = () => {
@@ -342,7 +342,7 @@ const Layout = styled.section`
 `
 
 const Content = styled.article`
-  margin: 16px;
+  margin: 0;
   height: 100%;
   width: 100%;
 `
