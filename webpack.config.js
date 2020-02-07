@@ -7,8 +7,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index_bundle.js',
-    publicPath: '/'
+    filename: 'index_bundle.js'
   },
   devServer: {
     historyApiFallback: true,
@@ -20,7 +19,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
-        }
+        },
       },
       {
         test: /\.(html)$/,
@@ -55,8 +54,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/index.html'
-    })
+      template: './src/index.html',
+      favicon: './src/assets/favicons/favicon.ico',
+    }),
   ],
   resolve: {
     alias: {
